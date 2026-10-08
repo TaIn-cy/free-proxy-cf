@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "free-proxy-cf",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-07",
+  "observability": { "enabled": true },
+  "triggers": {
+    "crons": ["*/5 * * * *"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "free-proxy-cf-db",
+      "database_id": "YOUR_FREE_PROXY_D1_DATABASE_ID"
+    }
+  ]
+}
